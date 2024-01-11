@@ -9,6 +9,9 @@ module.exports = {
         "light-primary": "#FFDD95",
         "light-secondary": "#3468C0",
       },
+      fontFamily: {
+        number: ["var(--number)"],
+      },
     },
   },
   plugins: [],

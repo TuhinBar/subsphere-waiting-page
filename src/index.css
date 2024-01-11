@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+
+:root {
+  --number: "Caveat", cursive;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,7 +18,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
-  /* background-color: #f7f8fc; */
-  /* height: 100vh;
-  overflow: hidden; */
+  background-color: #272c34;
+  /* height: 100vh; */
+  overflow-x: hidden;
 }
