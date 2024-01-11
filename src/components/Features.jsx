@@ -3,6 +3,9 @@ import { PiPersonArmsSpreadLight } from "react-icons/pi";
 import { HiOutlineChatBubbleBottomCenterText } from "react-icons/hi2";
 import { FiVideo } from "react-icons/fi";
 import { AiOutlineDollar } from "react-icons/ai";
+import { RiCustomerServiceLine } from "react-icons/ri";
+import { MdOutlineLocalOffer } from "react-icons/md";
+
 import SingleFeaturecard from "./SingleFeaturecard";
 import PeopleCards from "./PeopleCards";
 
@@ -27,17 +30,17 @@ let features = [
   {
     name: "Pay as you go",
     desc: "Pay for the time you need, no subscription required",
-    icon: <AiOutlineDollar className="w-7 h-7 text-green-400" />,
+    icon: <AiOutlineDollar className="w-7 h-7 text-purple-400" />,
   },
   {
-    name: "Pay as you go",
-    desc: "Pay for the time you need, no subscription required",
-    icon: <AiOutlineDollar className="w-7 h-7 text-green-400" />,
+    name: "24/7 Customer service",
+    desc: "We're here to help. Contact us anytime",
+    icon: <RiCustomerServiceLine className="w-7 h-7 text-green-400" />,
   },
   {
-    name: "Pay as you go",
-    desc: "Pay for the time you need, no subscription required",
-    icon: <AiOutlineDollar className="w-7 h-7 text-green-400" />,
+    name: "Regular Offers & Discounts",
+    desc: "Get regular offers and discounts on your bookings",
+    icon: <MdOutlineLocalOffer className="w-7 h-7 text-pink-400" />,
   },
 ];
 
