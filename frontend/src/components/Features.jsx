@@ -46,7 +46,7 @@ let features = [
 
 const Features = () => {
   return (
-    <div className="flex lg:flex-row flex-col mt-6 lg:-mt-[1rem] 2xl:-mt-20 3xl:-mt-40 w-full lg:w-[80%] p-4 mx-auto bg-[#2a3037] rounded-md mb-60 px-8">
+    <div className="flex lg:flex-row flex-col mt-6 lg:-mt-[1rem] 2xl:-mt-20 3xl:-mt-40 w-full lg:w-[80%] p-4 mx-auto bg-[#2a3037] rounded-md mb-12 px-8">
       <div className="">
         <p className="font-semibold text-3xl text-white">How it works</p>
         <p className="text-white text-xs font-medium mt-2 mb-4">
