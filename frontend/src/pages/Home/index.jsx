@@ -21,6 +21,16 @@ const Home = () => {
       <div className="">
         <Features />
       </div>
+      <div className="footer opacity-55">
+        <div className="flex flex-col items-center justify-center gap-2 p-2 border-t border-secondary ">
+          <p className="text-white text-xs font-medium">
+            © 2023 Subsphere, FiNDiNG Matrix. All rights reserved.
+          </p>
+          <p className="text-white text-xs font-medium">
+            Building with love and a lot of passion ❤
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

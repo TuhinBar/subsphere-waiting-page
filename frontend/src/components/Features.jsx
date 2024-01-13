@@ -46,15 +46,15 @@ let features = [
 
 const Features = () => {
   return (
-    <div className="flex lg:flex-row flex-col mt-6 lg:-mt-[10rem] w-full lg:w-[80%] p-4 lg:mx-auto mx-4 bg-[#2a3037] rounded-md mb-60">
-      <div>
+    <div className="flex lg:flex-row flex-col mt-6 lg:-mt-[10rem] w-full lg:w-[80%] p-4 mx-auto bg-[#2a3037] rounded-md mb-60 px-8">
+      <div className="">
         <p className="font-semibold text-3xl text-white">How it works</p>
         <p className="text-white text-xs font-medium mt-2 mb-4">
           We make it easy to build and manage membership program for your
           business{" "}
         </p>
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-0">
-          <div className="flex flex-wrap w-[100%] lg:w-[50%] gap-y-12 gap-x-4 h-full">
+          <div className="flex flex-wrap w-[100%] lg:w-[50%] gap-y-12 gap-x-4 h-full justify-around min-w-0 ">
             {features.map((feature, index) => (
               <SingleFeaturecard feature={feature} index={index} />
             ))}
