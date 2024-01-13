@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className="relative">
       <FloatingIcons />
-      <div className="flex justify-between h-screen relative overflow-x-hidden">
+      <div className="flex justify-between h-full md:h-screen relative overflow-x-hidden my-16">
         <div className="left hidden lg:absolute lg:block left-2 -translate-x-40  xl:opacity-25 md:opacity-10 ">
           <img className="w-[85%] 3xl:w-full" src="https://i.imgur.com/nQzVtee.png" alt="" />
         </div>

@@ -3,7 +3,8 @@ import EmailInputs from "./Inputs";
 
 const HeaderTags = () => {
   return (
-    <div className="flex items-center justify-center flex-col md:gap-4 m-auto w-full p-4 md:p-0 md:w-[70%] relative">
+    <div className="flex gap-2 items-center justify-center flex-col md:gap-4 m-auto w-full p-4 md:p-0 md:w-[70%] relative ">
+      <img src="/LOGO.svg" className="w-24 3xl:w-28" alt="" />
       <p className="text-secondary md:text-2xl sm:text-lg text-sm mb-2 md:mb-0">
         Subsphere Awaits You!
       </p>
@@ -25,11 +26,6 @@ const HeaderTags = () => {
         </span>
       </p>
 
-      <img
-        src="https://i.imgur.com/BL6mFmK.png"
-        alt=""
-        className="absolute md:h-24 h-16 right-5 top-[120px] md:right-28 md:top-[200px] xl:top-[180px] xl:right-[320px] scale-90 md:scale-[65%] xl:scale-100"
-      />
       <EmailInputs />
       <p className="text-white text-center text-sm md:text-md mt-2 md:mb-0  font-medium">
         Fuel Your Growth, Elevate Your Memberships – Let Us Drive Success for
