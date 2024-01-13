@@ -5,7 +5,7 @@ const HeaderTags = () => {
   return (
     <div className="flex gap-2 items-center justify-center flex-col md:gap-4 m-auto w-full p-4 md:p-0 md:w-[70%] relative ">
       <img src="/LOGO.svg" className="w-24 3xl:w-28" alt="" />
-      <p className="text-secondary md:text-2xl sm:text-lg text-sm mb-2 md:mb-0">
+      <p className="text-secondary md:text-xl sm:text-lg text-sm mb-2 md:mb-0">
         Subsphere Awaits You!
       </p>
       <p className="md:text-5xl sm:text-3xl text-2xl text-white font-bold w-full text-center px-4 md:px-0 ">

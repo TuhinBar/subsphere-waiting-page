@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const SingleFeaturecard = ({ feature, index }) => {
   return (
     <div
-      className="hover:scale-[1.1] ease-in-out transition-all duration-200 flex flex-col items-start justify-start mt-4 w-[45%] shadow-md sm:shadow-lg p-4 rounded-md"
+      className="flex flex-col items-start justify-start mt-4 w-[45%] shadow-md sm:shadow-lg p-4 rounded-md cursor-pointer"
       key={index}
     >
       <div className="">{feature.icon}</div>

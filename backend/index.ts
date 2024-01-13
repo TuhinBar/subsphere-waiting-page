@@ -1,5 +1,6 @@
 import * as dotenv from "dotenv";
-dotenv.config({ path: "prod.env" });
+// dotenv.config({ path: "prod.env" });
+dotenv.config({ path: "dev.env" });
 console.log("ENV : ", process.env.NODE_ENV);
 
 import express, { Application } from "express";
