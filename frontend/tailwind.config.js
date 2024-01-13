@@ -12,6 +12,9 @@ module.exports = {
       fontFamily: {
         number: ["var(--number)"],
       },
+      screens: {
+        "3xl": "1920px",
+      },
     },
   },
   plugins: [],
