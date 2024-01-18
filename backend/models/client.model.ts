@@ -9,7 +9,6 @@ const clientSchema = new Schema<IClient>({
   email: {
     type: String,
     required: true,
-    unique: true,
   },
   clientId: {
     type: String,

@@ -13,6 +13,7 @@ import connectToDB from "./configs/db/connectDB";
 
 // routes imports
 import emailRoutes from "./routes/emailRoutes";
+import commonRoutes from "./routes/common/index";
 
 const app: Application = express();
 const port = process.env.PORT || 5000;
@@ -29,6 +30,7 @@ app.get("/", (req: Request, res: Response) => {
 
 // routes
 app.use("/api/v1/waitlist", emailRoutes);
+app.use("/api/v1/waitlist", commonRoutes);
 
 app.listen(port, async () => {
   try {

@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import EmailInputs from "./Inputs";
+import axios from "../utils/axios";
 
 const HeaderTags = () => {
+  const [userCount, setUserCount] = useState();
+
+  useEffect(() => {
+    const fetchCount = async () => {
+      const { data } = await axios.get("/total-clients");
+
+      if (data.success) {
+        setUserCount(data?.totalClientsCount);
+      }
+    };
+
+    fetchCount();
+  }, []);
+
   return (
     <div className="flex gap-2 items-center justify-center flex-col md:gap-4 m-auto w-full p-4 md:p-0 md:w-[70%] relative ">
       <img src="/LOGO.svg" className="w-24 3xl:w-28" alt="" />
@@ -26,7 +41,7 @@ const HeaderTags = () => {
         </span>
       </p>
 
-      <EmailInputs />
+      <EmailInputs userCount={userCount} setUserCount={setUserCount} />
       <p className="text-white text-center text-sm md:text-md mt-2 md:mb-0  font-medium">
         Fuel Your Growth, Elevate Your Memberships – Let Us Drive Success for
         Your Business :)
@@ -34,7 +49,7 @@ const HeaderTags = () => {
       <p className="mt-4 text-center md:text-xl text-[17px] text-white">
         Already
         <span className="text-6xl md:text-8xl font-number text-primary relative inline-block mr-4">
-          {`42`}
+          {userCount}
           <img
             src="https://i.imgur.com/8f8BuMy.png"
             alt=""
