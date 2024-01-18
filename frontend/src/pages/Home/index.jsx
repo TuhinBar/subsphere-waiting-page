@@ -4,10 +4,12 @@ import Features from "../../components/Features";
 import FloatingIcons from "../../components/FloatingIcons";
 import { RiLinkedinFill, RiMailFill, RiTwitterFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
+import Modal from "../../components/Modal";
 
 const Home = () => {
   return (
     <div className="relative">
+      {/* <Modal /> */}
       <FloatingIcons />
       <div className="flex justify-between h-full md:h-screen relative overflow-x-hidden mb-16">
         <div className="left hidden lg:absolute lg:block left-2 -translate-x-40  xl:opacity-25 md:opacity-10 ">

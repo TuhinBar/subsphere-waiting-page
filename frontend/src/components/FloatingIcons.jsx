@@ -28,7 +28,7 @@ const FloatingIcons = () => {
     <motion.div className="hidden xl:flex justify-between items-center">
       <div className="">
         <motion.img
-          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 w-20 top-[2rem] opacity-20  left-[11rem] absolute cursor-pointer z-50"
+          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 w-20 top-[2rem] opacity-20  left-[11rem] absolute cursor-pointer z-40"
           drag={true}
           dragConstraints={{
             top: -10,
@@ -40,7 +40,7 @@ const FloatingIcons = () => {
           alt=""
         />
         <motion.img
-          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 w-20 opacity-20 cursor-pointer top-[20rem] left-[8rem] absolute z-50"
+          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 w-20 opacity-20 cursor-pointer top-[20rem] left-[8rem] absolute z-40"
           drag={true}
           dragConstraints={{
             top: -10,
@@ -52,7 +52,7 @@ const FloatingIcons = () => {
           alt=""
         />
         <motion.img
-          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 w-20 opacity-20 cursor-pointer top-[30rem] 3xl:top-[35rem] left-[15rem] 3xl:left-[18rem] absolute z-50"
+          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 w-20 opacity-20 cursor-pointer top-[30rem] 3xl:top-[35rem] left-[15rem] 3xl:left-[18rem] absolute z-40"
           drag={true}
           dragConstraints={{
             top: -10,
@@ -64,7 +64,7 @@ const FloatingIcons = () => {
           alt=""
         />
         <motion.img
-          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 w-20 opacity-20 cursor-pointer top-[37rem] 3xl:top-[40rem] left-8 3xl:left-[4rem] absolute z-50"
+          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 w-20 opacity-20 cursor-pointer top-[37rem] 3xl:top-[40rem] left-8 3xl:left-[4rem] absolute z-40"
           drag={true}
           dragConstraints={{
             top: -10,
@@ -78,7 +78,7 @@ const FloatingIcons = () => {
       </div>
       <div className="">
         <motion.img
-          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 opacity-20 z-50 w-20 top-[6rem] right-[4rem] absolute cursor-pointer"
+          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 opacity-20 z-40 w-20 top-[6rem] right-[4rem] absolute cursor-pointer"
           drag={true}
           dragConstraints={{
             top: -10,
@@ -90,7 +90,7 @@ const FloatingIcons = () => {
           alt=""
         />
         <motion.img
-          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200  z-50 w-20 opacity-20 top-[14rem] 3xl:right-[15rem] right-[12rem] absolute cursor-pointer"
+          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200  z-40 w-20 opacity-20 top-[14rem] 3xl:right-[15rem] right-[12rem] absolute cursor-pointer"
           drag={true}
           dragConstraints={{
             top: -10,
@@ -102,7 +102,7 @@ const FloatingIcons = () => {
           alt=""
         />
         <motion.img
-          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 z-50 opacity-20 w-20 3xl:top-[28rem] top-[25rem] right-[10rem] absolute cursor-pointer"
+          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 z-40 opacity-20 w-20 3xl:top-[28rem] top-[25rem] right-[10rem] absolute cursor-pointer"
           drag={true}
           dragConstraints={{
             top: -10,
@@ -114,7 +114,7 @@ const FloatingIcons = () => {
           alt=""
         />
         <motion.img
-          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 z-50 opacity-20 w-20 3xl:top-[45rem] top-[38rem] right-[16rem] 3xl:right-[20rem] absolute cursor-pointer"
+          className="hover:opacity-70 hover:scale-[1.05] ease-in-out transition-all duration-200 z-40 opacity-20 w-20 3xl:top-[45rem] top-[38rem] right-[16rem] 3xl:right-[20rem] absolute cursor-pointer"
           drag={true}
           dragConstraints={{
             top: -10,
