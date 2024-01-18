@@ -4,11 +4,16 @@ import Features from "../../components/Features";
 import FloatingIcons from "../../components/FloatingIcons";
 import { RiLinkedinFill, RiMailFill, RiTwitterFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
-import { FaSquareXTwitter } from "react-icons/fa6";
+<<<<<<< HEAD
+import { FaSquareXTwitter, FaXTwitter } from "react-icons/fa6";
+=======
+import Modal from "../../components/Modal";
+>>>>>>> 5a62115b83efa9590b707c426baffc9c5b64637b
 
 const Home = () => {
   return (
     <div className="relative">
+      {/* <Modal /> */}
       <FloatingIcons />
       <div className="flex justify-between h-full md:h-screen relative overflow-x-hidden mb-16">
         <div className="left hidden lg:absolute lg:block left-2 -translate-x-40  xl:opacity-25 md:opacity-10 ">
@@ -36,7 +41,7 @@ const Home = () => {
         <div className="flex flex-col items-center justify-center gap-2 p-2 border-t border-secondary ">
           <div className="flex gap-2 cursor-pointer ">
             <MdEmail className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
-            <FaSquareXTwitter className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
+            <FaXTwitter className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
             <RiLinkedinFill className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
           </div>
           <p className="text-white text-xs font-medium opacity-55">
