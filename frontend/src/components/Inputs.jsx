@@ -1,4 +1,5 @@
 import React from "react";
+import { Bounce, Slide, ToastContainer, toast } from "react-toastify";
 
 const EmailInputs = () => {
   return (
@@ -13,10 +14,29 @@ const EmailInputs = () => {
           alt=""
           className="absolute md:-top-[330%] md:left-24  md:rotate-[40deg] 3xl:rotate-0 lg:rotate-[30deg] -top-[250%] left-6 lg:left-8 scale-[70%] md:scale-[65%] xl:scale-80 3xl:scale-90 3xl:-left-2"
         />
-        <button className="relative font-semibold text-white bg-secondary rounded-2xl hover:bg-light-secondary transition-all duration-300 border-2 border-secondary hover:border-white p-2 hover:border-opacity-45 whitespace-nowrap md:px-5 cursor-pointer">
+        <button
+          className="relative font-semibold text-white bg-secondary rounded-2xl hover:bg-light-secondary transition-all duration-300 border-2 border-secondary hover:border-white p-2 hover:border-opacity-45 whitespace-nowrap md:px-5 cursor-pointer"
+          onClick={() => {
+            toast("🚀 You are up for the early access!");
+          }}
+        >
           Join Waitlist
         </button>
       </div>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={2500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        rtl={false}
+        closeOnClick={false}
+        pauseOnHover={true}
+        draggable={true}
+        pauseOnFocusLoss={false}
+        progress={undefined}
+        theme="dark"
+        transition={Slide}
+      />
     </div>
   );
 };
