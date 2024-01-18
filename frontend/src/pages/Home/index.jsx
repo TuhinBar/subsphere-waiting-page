@@ -4,6 +4,7 @@ import Features from "../../components/Features";
 import FloatingIcons from "../../components/FloatingIcons";
 import { RiLinkedinFill, RiMailFill, RiTwitterFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
+import { FaSquareXTwitter, FaXTwitter } from "react-icons/fa6";
 
 const Home = () => {
   return (
@@ -35,7 +36,7 @@ const Home = () => {
         <div className="flex flex-col items-center justify-center gap-2 p-2 border-t border-secondary ">
           <div className="flex gap-2 cursor-pointer ">
             <MdEmail className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
-            <RiTwitterFill className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
+            <FaXTwitter className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
             <RiLinkedinFill className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
           </div>
           <p className="text-white text-xs font-medium opacity-55">
