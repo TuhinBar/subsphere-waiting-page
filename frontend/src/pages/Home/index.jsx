@@ -4,11 +4,8 @@ import Features from "../../components/Features";
 import FloatingIcons from "../../components/FloatingIcons";
 import { RiLinkedinFill, RiMailFill, RiTwitterFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
-<<<<<<< HEAD
-import { FaSquareXTwitter, FaXTwitter } from "react-icons/fa6";
-=======
+import { FaXTwitter } from "react-icons/fa6";
 import Modal from "../../components/Modal";
->>>>>>> 5a62115b83efa9590b707c426baffc9c5b64637b
 
 const Home = () => {
   return (
