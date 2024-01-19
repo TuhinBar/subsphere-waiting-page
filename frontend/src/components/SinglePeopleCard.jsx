@@ -8,7 +8,7 @@ const SinglePeopleCard = ({ peoples, number }) => {
       {peoples.map((people, index) => {
         return (
           <div
-            className={`bg-gradient-to-t  w-24 rounded-md p-2  cursor-pointer transition-all duration-1000 ${
+            className={`bg-gradient-to-t w-28 md:w-32 rounded-md p-2  cursor-pointer transition-all duration-1000 ${
               index === hoveredItem
                 ? "from-[#2D333C] to-[#6A7380]"
                 : "from-[#2D333C10] to-[#6A738010]"

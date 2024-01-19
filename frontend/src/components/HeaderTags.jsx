@@ -19,7 +19,7 @@ const HeaderTags = () => {
 
   return (
     <div className="flex gap-2 items-center justify-center flex-col md:gap-4 m-auto w-full p-4 md:p-0 md:w-[70%] relative ">
-      <img src="/LOGO.svg" className="w-24 3xl:w-28" alt="" />
+      <img src="/LOGO.svg" className="w-24 3xl:w-28" alt="logo" />
       <p className="text-secondary md:text-xl sm:text-lg text-sm mb-2 md:mb-0">
         Subsphere Awaits You!
       </p>
