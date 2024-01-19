@@ -3,6 +3,10 @@ import Features from "../../components/Features";
 import FloatingIcons from "../../components/FloatingIcons";
 import Footer from "../../components/Footer";
 import HeaderTags from "../../components/HeaderTags";
+import { RiLinkedinFill, RiMailFill, RiTwitterFill } from "react-icons/ri";
+import { MdEmail } from "react-icons/md";
+import { FaXTwitter } from "react-icons/fa6";
+import Modal from "../../components/Modal";
 
 const Home = () => {
   return (
