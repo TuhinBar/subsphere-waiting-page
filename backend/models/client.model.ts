@@ -3,6 +3,9 @@ import { Schema, model, Document } from "mongoose";
 interface IClient extends Document {
   email: string;
   clientId: string;
+  from: string;
+  referredBy: string;
+  referId: string;
 }
 
 const clientSchema = new Schema<IClient>({
@@ -11,6 +14,15 @@ const clientSchema = new Schema<IClient>({
     required: true,
   },
   clientId: {
+    type: String,
+  },
+  from: {
+    type: String,
+  },
+  referredBy: {
+    type: String,
+  },
+  referId: {
     type: String,
   },
 });

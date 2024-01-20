@@ -1,13 +1,16 @@
 import Client from "../models/client.model";
 import { Request, Response } from "express";
 import { v4 as uuidv4 } from "uuid";
+import ShortUniqueId from "short-unique-id";
+const uid = new ShortUniqueId({ length: 10 });
 import isEmail from "validator/lib/isEmail";
 
 const addClientToList = async (req: Request, res: Response) => {
-  const { email } = req.body;
+  const { email, referredBy, from } = req.body;
   const clientId = uuidv4();
 
   console.log("controllers [addClientToList] ==> 🚀 ");
+  console.log("request body ==> ", req.body);
 
   try {
     // Check if the email is valid
@@ -37,6 +40,9 @@ const addClientToList = async (req: Request, res: Response) => {
     const newClient = await Client.create({
       email,
       clientId,
+      referredBy: referredBy || "subsphere",
+      from: from || "direct",
+      referId: uid.rnd(),
     });
 
     console.log("New client created ==> ✔ ", newClient.email);

@@ -1,12 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { Bounce, Slide, ToastContainer, toast } from "react-toastify";
 import validator from "validator";
 import axios from "../utils/axios";
+import Modal from "./Modal";
 
 const EmailInputs = ({ setUserCount, userCount }) => {
+  const location = useLocation();
+
   const [emailInput, setEmailInpt] = useState("");
 
   const [loading, setLoading] = useState(false);
+
+  // these variables for analytics purposes
+  const [referredBy, setReferredBy] = useState(null);
+  const [from, setFrom] = useState("direct");
+
+  const [showCongoModal, setShowCongoModal] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const referredBy = params.get("ref");
+    const userCameFrom = params.get("from");
+    if (referredBy) {
+      setReferredBy(referredBy);
+    }
+    if (userCameFrom) {
+      setFrom(userCameFrom);
+    }
+  }, [location.search]);
 
   const joinHandler = async (e) => {
     e.preventDefault();
@@ -20,12 +42,21 @@ const EmailInputs = ({ setUserCount, userCount }) => {
     try {
       if (email) {
         setLoading(true);
-        const { data } = await axios.post("/join", { email });
+        const { data } = await axios.post("/join", {
+          email,
+          referredBy,
+          from,
+        });
         if (data.success) {
           toast("🚀 You are up for the early access!");
           setUserCount(userCount + 1);
           setEmailInpt("");
           setLoading(false);
+
+          // Set showCongoModal to true after 1 second
+          setTimeout(() => {
+            setShowCongoModal(true);
+          }, 1500);
         } else if (data.alreadyExists) {
           toast("🎉 You are already signed up for the early access!");
           setEmailInpt("");
@@ -81,6 +112,8 @@ const EmailInputs = ({ setUserCount, userCount }) => {
         theme="dark"
         transition={Slide}
       />
+
+      {showCongoModal && <Modal setShow={setShowCongoModal} />}
     </div>
   );
 };
