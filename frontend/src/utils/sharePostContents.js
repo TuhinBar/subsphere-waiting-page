@@ -1,15 +1,28 @@
-const handleLinkedInShare = () => {
+const handleLinkedInShare = ({ clientDetails }) => {
   const linkedInBaseUrl = "https://www.linkedin.com/";
-  const url = `${linkedInBaseUrl}?mini=true&url=${
-    window.location.href
-  }&title=${encodeURIComponent("Arian")}`;
 
-  //   window.open(url, "_blank");
-  window.open(
-    "https://www.linkedin.com/shareArticle?mini=true&text=what are you waiting for?&url=https://www.example.com",
-    "linkedin",
-    "height=500,width=550,resizable=1"
-  );
+  const shareMessage = `Exciting news! I just joined the waitlist for SubSphere, the all-in-one membership and subscription management tool for businesses. 🌐✨ Join me and discover the future of subscription management! #SubSphere #SaaS`;
+
+  const url = `${linkedInBaseUrl}shareArticle?mini=true&title=${encodeURIComponent(
+    "SAAS Product Waiting List"
+  )}&summary=${encodeURIComponent(
+    shareMessage
+  )}&url=https://waitlist.thesubsphere.com/?ref=${
+    clientDetails?.referId
+  }&from=linkedin`;
+
+  window.open(url, "linkedin-share-dialog");
 };
 
-export { handleLinkedInShare };
+const handleTwitterShare = ({ clientDetails }) => {
+  const twitterBaseUrl = "https://twitter.com/intent/tweet";
+  const shareMessage = `🚀 Exciting news! I just joined the waitlist for SubSphere, the all-in-one membership and subscription management tool for businesses. 🌐✨ Join me and discover the future of subscription management! #SubSphere #SaaS`;
+
+  const url = `${twitterBaseUrl}?text=${encodeURIComponent(
+    shareMessage
+  )}&url=https://waitlist.thesubsphere.com?ref=${clientDetails?.referId}`;
+
+  window.open(url, "twitter-share-dialog");
+};
+
+export { handleLinkedInShare, handleTwitterShare };

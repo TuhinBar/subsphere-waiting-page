@@ -18,6 +18,8 @@ const EmailInputs = ({ setUserCount, userCount }) => {
 
   const [showCongoModal, setShowCongoModal] = useState(false);
 
+  const [joinedUser, setJoinedUser] = useState();
+
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const referredBy = params.get("ref");
@@ -52,7 +54,7 @@ const EmailInputs = ({ setUserCount, userCount }) => {
           setUserCount(userCount + 1);
           setEmailInpt("");
           setLoading(false);
-
+          setJoinedUser(data.joinedUser);
           // Set showCongoModal to true after 1 second
           setTimeout(() => {
             setShowCongoModal(true);
@@ -113,7 +115,13 @@ const EmailInputs = ({ setUserCount, userCount }) => {
         transition={Slide}
       />
 
-      {showCongoModal && <Modal setShow={setShowCongoModal} />}
+      {showCongoModal && (
+        <Modal
+          setShow={setShowCongoModal}
+          waitlistNumber={userCount}
+          clientDetails={joinedUser || {}}
+        />
+      )}
     </div>
   );
 };

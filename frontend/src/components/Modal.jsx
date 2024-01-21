@@ -1,9 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { FaLinkedin, FaSquareXTwitter, FaXTwitter } from "react-icons/fa6";
 import { MdClose, MdCopyAll } from "react-icons/md";
 import { RiLinkedinFill, RiTwitterFill } from "react-icons/ri";
 import { toast } from "react-toastify";
-import { handleLinkedInShare } from "../utils/sharePostContents";
+import {
+  handleLinkedInShare,
+  handleTwitterShare,
+} from "../utils/sharePostContents";
 
 const getTheContratulationModalContent = ({
   waitlistNumber,
@@ -34,8 +37,10 @@ const getTheContratulationModalContent = ({
 
         <p className="text-secondary text-sm">
           {" "}
-          <span className="font-bold">{waitlistNumber}</span> businesses are
-          with you already
+          <span className="font-semibold text-primary">
+            #{waitlistNumber}
+          </span>{" "}
+          businesses are with you already
         </p>
       </div>
       <div className="flex flex-col gap-2">
@@ -69,7 +74,12 @@ const getTheContratulationModalContent = ({
       <div className="flex flex-col justify-center items-center gap-2 mt-2">
         <p className="text-xs md:text-sm">Tell the world what you just did</p>
         <div className="flex gap-2">
-          <button className="border flex text-xs justify-center items-center gap-2 rounded-md whitespace-nowrap px-1 py-[6px]">
+          <button
+            className="border flex text-xs justify-center items-center gap-2 rounded-md whitespace-nowrap px-1 py-[6px]"
+            onClick={() => {
+              handleTwitterShare({ clientDetails });
+            }}
+          >
             <FaXTwitter size={18} />
             Share on Twitter
           </button>
@@ -77,7 +87,7 @@ const getTheContratulationModalContent = ({
           <button
             className="border flex text-xs justify-center items-center gap-2 rounded-md whitespace-nowrap px-1 py-[6px]"
             onClick={() => {
-              handleLinkedInShare();
+              handleLinkedInShare({ clientDetails });
             }}
           >
             <FaLinkedin size={18} />
@@ -92,7 +102,7 @@ const getTheContratulationModalContent = ({
 // the setShow parameter is must!
 
 const Modal = ({ modalContent, waitlistNumber, clientDetails, setShow }) => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.body.style.overflow = "hidden";
 
     // Cleanup function to remove the style when the component is unmounted or the modal is closed

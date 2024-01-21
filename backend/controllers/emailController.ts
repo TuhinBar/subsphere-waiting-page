@@ -49,7 +49,7 @@ const addClientToList = async (req: Request, res: Response) => {
     return res.status(201).json({
       success: true,
       message: "Successfully added to the list",
-      data: newClient,
+      joinedUser: newClient,
     });
   } catch (error: any) {
     console.log("Error in controller [addClientToList] ==> 🌋 ", error);
