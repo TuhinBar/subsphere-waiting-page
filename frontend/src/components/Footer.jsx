@@ -21,7 +21,7 @@ const Footer = (props) => {
         </div>
         <div className="">
           <h1 className="text-white font-semibold text-sm mb-2">Contact</h1>
-          <p className="text-xs text-gray-500">subsphere.business@gmail.com</p>
+          <p className="text-xs text-gray-500">business@thesubsphere.com</p>
         </div>
         <div className="flex flex-col cursor-pointer ">
           <h1 className="text-white font-semibold text-sm mb-2">Socials</h1>
