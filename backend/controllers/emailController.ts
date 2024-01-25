@@ -5,6 +5,10 @@ import ShortUniqueId from "short-unique-id";
 const uid = new ShortUniqueId({ length: 10 });
 import isEmail from "validator/lib/isEmail";
 
+import { sendEmailUsingResend } from "../services/email/connectResend";
+// @ts-ignore
+import { EmailTemplate } from "../constants/ThankYouEmailTemplate";
+
 const addClientToList = async (req: Request, res: Response) => {
   const { email, referredBy, from } = req.body;
   const clientId = uuidv4();
@@ -46,6 +50,16 @@ const addClientToList = async (req: Request, res: Response) => {
     });
 
     console.log("New client created ==> ✔ ", newClient.email);
+
+    // when new client created send them an email
+
+    sendEmailUsingResend({
+      senderName: "Subsphere",
+      from: "business@thesubsphere.com",
+      to: [newClient.email],
+      subject: "Welcome to Subsphere",
+    });
+
     return res.status(201).json({
       success: true,
       message: "Successfully added to the list",
