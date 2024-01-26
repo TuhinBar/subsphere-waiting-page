@@ -1,13 +1,20 @@
 import Client from "../models/client.model";
 import { Request, Response } from "express";
 import { v4 as uuidv4 } from "uuid";
+import ShortUniqueId from "short-unique-id";
+const uid = new ShortUniqueId({ length: 10 });
 import isEmail from "validator/lib/isEmail";
 
+import { sendEmailUsingResend } from "../services/email/connectResend";
+// @ts-ignore
+import { EmailTemplate } from "../constants/ThankYouEmailTemplate";
+
 const addClientToList = async (req: Request, res: Response) => {
-  const { email } = req.body;
+  const { email, referredBy, from } = req.body;
   const clientId = uuidv4();
 
   console.log("controllers [addClientToList] ==> 🚀 ");
+  console.log("request body ==> ", req.body);
 
   try {
     // Check if the email is valid
@@ -37,13 +44,26 @@ const addClientToList = async (req: Request, res: Response) => {
     const newClient = await Client.create({
       email,
       clientId,
+      referredBy: referredBy || "subsphere",
+      from: from || "direct",
+      referId: uid.rnd(),
     });
 
     console.log("New client created ==> ✔ ", newClient.email);
+
+    // when new client created send them an email
+
+    sendEmailUsingResend({
+      senderName: "Subsphere",
+      from: "business@thesubsphere.com",
+      to: [newClient.email],
+      subject: "Welcome to Subsphere",
+    });
+
     return res.status(201).json({
       success: true,
       message: "Successfully added to the list",
-      data: newClient,
+      joinedUser: newClient,
     });
   } catch (error: any) {
     console.log("Error in controller [addClientToList] ==> 🌋 ", error);
