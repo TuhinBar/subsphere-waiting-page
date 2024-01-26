@@ -1,8 +1,10 @@
 import React from 'react'
 import { MdEmail } from "react-icons/md";
 import { RiTwitterFill, RiLinkedinFill } from "react-icons/ri";
+import { useNavigate } from 'react-router-dom';
 
 const Footer = props => {
+    const navigate = useNavigate();
     return (
         <div className=" h-full">
             <div className='flex md:justify-between lg:justify-evenly md:items-center md:gap-0 gap-8 flex-col md:flex-row px-12 md:px-0  pt-12 pb-8 '>
@@ -15,9 +17,9 @@ const Footer = props => {
                     <h1 className='font-semibold text-white text-sm mb-2'>
                         Resources
                     </h1>
-                    <button className='text-xs text-gray-500'>Blogs</button>
+                    <button onClick={() => navigate("/blogs")} className='text-xs text-gray-500'>Blogs</button>
                 </div>
-                <div className=''>
+                <div>
                     <h1 className='text-white font-semibold text-sm mb-2'>Contact</h1>
                     <p className='text-xs text-gray-500'>subsphere.business@gmail.com</p>
                 </div>
@@ -26,7 +28,10 @@ const Footer = props => {
                     <div className='flex gap-6'>
                         <MdEmail className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
                         <RiTwitterFill className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
-                        <RiLinkedinFill className="w-5  h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
+                        <a href="https://www.linkedin.com/company/thesubsphere">
+                            <RiLinkedinFill className="w-5  h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
+                        </a>
+
                     </div>
                 </div>
 
