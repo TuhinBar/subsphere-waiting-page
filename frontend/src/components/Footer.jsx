@@ -53,7 +53,7 @@ const Footer = (props) => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center gap-2 p-2   border-secondary border-t w-full md:w-2/4 mx-auto   ">
-        <p className="text-white text-xs font-medium opacity-55">
+        <p className="text-white text-xs font-medium opacity-55 text-center">
           © 2024 Subsphere, FiNDiNG Matrix | All rights reserved.
         </p>
         <p className="text-white text-xs font-medium opacity-55">
