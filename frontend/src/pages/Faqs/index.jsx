@@ -82,21 +82,22 @@ const Faqs = () => {
   return (
     <section className="flex flex-col">
       <Navbar />
-      <div className="m-auto p-16 md:p-32">
+      <div className="m-auto p-16 md:pb-32 md:pt-20">
         <h1 className="text-white text-4xl md:text-6xl font-semibold">FAQs</h1>
       </div>
 
-      <div className="max-w-3xl m-auto">
+      <div className="max-w-3xl m-auto md:mb-20 ">
         <div className="z-40 relative flex justify-center overflow-hidden">
           <ul className="w-11/12 justify-items-start self-auto flex items-center scrollbar-hidden overflow-auto gap-10">
             {faqNavList?.map((faq, index) => {
               return (
                 <li
                   onClick={() => handleFaqClick(index)}
-                  className={`${
-                    index === faqNavOn &&
-                    " border-[1px] border-[#3B3B40] rounded-lg text-[#FF9843] px-2 lg:px-0 py-2"
-                  } text-base text-white cursor-pointer w-full whitespace-nowrap text-center scrollbar-hidden`}
+                  className={`cursor-pointer w-full whitespace-nowrap text-center scrollbar-hidden p-2 lg:px-0 ${
+                    index === faqNavOn
+                      ? " border-[1px] border-[#3B3B40] rounded-lg text-primary "
+                      : "text-white"
+                  }`}
                   key={index}
                 >
                   {faq}

@@ -58,13 +58,13 @@ const BlogContents = [
 
 const BlogCards = () => {
   return (
-    <>
+    <section className="mb-20">
       {BlogContents.map((item, index) => {
         return (
           <Link
             to={`/blogs/${item.id}`}
             key={index}
-            className="text-white w-[90%] mx-auto rounded-lg p-8 flex gap-2 bg-[#2f353c] cursor-pointer my-6"
+            className="text-white w-[90%] mx-auto rounded-lg p-8 flex gap-2 bg-[#2f353c] cursor-pointer mt-6"
           >
             <div className="p-0 lg:pr-8">
               <div className="flex justify-between py-4 gap-4">
@@ -92,7 +92,7 @@ const BlogCards = () => {
           </Link>
         );
       })}
-    </>
+    </section>
   );
 };
 

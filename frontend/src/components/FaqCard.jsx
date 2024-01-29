@@ -25,8 +25,8 @@ const FaqCard = (props) => {
   return (
     <div className="cursor-pointer px-4 lg:px-0" onClick={toggleAnswer}>
       <div className="rounded-xl border-[1px] border-[#3B3B40] text-white p-4  mb-6">
-        <div className="flex justify-between items-center">
-          <div className="text-medium text-white font-semibold">
+        <div className="flex justify-between items-center gap-4">
+          <div className="text-base md:text-lg text-white font-semibold">
             <p>{question}</p>
           </div>
           <div className="" style={iconStyle}>
@@ -35,7 +35,9 @@ const FaqCard = (props) => {
         </div>
         <div ref={answerRef} style={answerStyle}>
           <div className="pt-6">
-            <p className="text-white/60 text-lg">{answer}</p>
+            <p className="text-white/60 text-sm md:text-lg text-justify">
+              {answer}
+            </p>
           </div>
         </div>
       </div>

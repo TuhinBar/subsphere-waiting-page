@@ -7,7 +7,7 @@ const Blogs = () => {
   return (
     <section className="flex-col flex">
       <Navbar />
-      <div className="m-auto p-16 md:p-32">
+      <div className="m-auto p-16  md:pb-32 md:pt-20">
         <h1 className="text-white text-4xl md:text-6xl font-semibold">Blogs</h1>
       </div>
       <BlogCards />
