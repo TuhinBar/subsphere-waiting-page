@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const Footer = (props) => {
   const navigate = useNavigate();
   return (
-    <div className=" h-full">
+    <div className=" h-full px-0 md:px-8 lg:px-0 mt-0 lg:mt-40 xl:mt-0">
       <div className="flex md:justify-between lg:justify-evenly md:items-center md:gap-0 gap-8 flex-col md:flex-row px-12 md:px-0  pt-12 pb-8 ">
         <a href="/" className="flex items-center">
           {/* <img src="/LOGO.svg" alt="logo" className="w-12 3xl:w-20" />
@@ -24,6 +24,12 @@ const Footer = (props) => {
             className="text-xs text-gray-500"
           >
             Blogs
+          </button>
+          <button
+            onClick={() => navigate("/faqs")}
+            className="text-xs text-gray-500"
+          >
+            FAQs
           </button>
           <button
             onClick={() => {
