@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 const BlogContents = [
   {
     id: 1,
-    Date: "19 Jan,2024",
-    Time: "5 min read",
-    Title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    Date: "30 Jan, 2024",
+    Time: "2 min read",
+    Title: "Navigating the Future: Trends in Subscription Based Models",
     Content:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci laboriosam ad explicabo veniam quisquam? Est nemo, molestiae quod quis accusantium distinctio dolor neque reiciendis eveniet veritatis. Provident nobis quos laudantium  neque reiciendis eveniet veritatis. Provident nobis quos laudantium.",
-    Image: "https://i.imgur.com/IGBjds7.jpg",
+      "Hey there! Ever noticed how you can get cool stuff without actually owning it? It's all thanks to subscription services, and they're taking over the scene in many industries. From movies to food deliveries, people are loving the idea of using things without owning them. Businesses are catching on and gaining big benefits by offering subscription services. Let's explore this world and see how SubSphere is making it even better for companies.",
+    Image: "https://i.imgur.com/cxwwHdy.jpeg",
+    key: "trends-in-subscription",
   },
   {
     id: 2,
@@ -62,7 +62,7 @@ const BlogCards = () => {
       {BlogContents.map((item, index) => {
         return (
           <Link
-            to={`/blogs/${item.id}`}
+            to={`/blogs/${item?.key}`}
             key={index}
             className="text-white w-[90%] mx-auto rounded-lg p-8 flex gap-2 bg-[#2f353c] cursor-pointer mt-6"
           >

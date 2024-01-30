@@ -3,8 +3,9 @@ import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
-import BlogPage from "./components/BlogPage"
-import Faqs from "./pages/Faqs"
+import BlogPage from "./components/BlogPage";
+import Faqs from "./pages/Faqs";
+import TrendsInSubscription from "./components/Blogs/TrendsInSubscription";
 
 function App() {
   return (
@@ -12,15 +13,24 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" name="Home" element={<Home />} />
-          <Route exact path="/blogs" name="Blogs" element={<Blogs/>} />
-          <Route path="/blogs/:id" name="Blog" element={<BlogPage/>} />
-          <Route path="/faqs" name="Blog" element={<Faqs/>} />
+          <Route exact path="/blogs" name="Blogs" element={<Blogs />} />
+          {/* <Route path="/blogs/:id" name="Blog" element={<BlogPage/>} /> */}
+
+          {/* single blogs routes */}
+          <Route
+            path="/blogs/trends-in-subscription"
+            name="Blog"
+            element={<TrendsInSubscription />}
+          />
+
+          <Route path="/faqs" name="Blog" element={<Faqs />} />
           <Route
             exact
             path="/thanks"
             name="thanks"
             element={<div>Thank you page</div>}
           />
+          <Route path="/blogs/*" element={<Navigate to="/blogs" replace />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
