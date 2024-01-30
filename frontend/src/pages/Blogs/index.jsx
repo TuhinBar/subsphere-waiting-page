@@ -1,26 +1,19 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
-import BlogCards from '../../components/BlogCards';
-import Footer from '../../components/Footer';
+import React from "react";
+import BlogCards from "../../components/BlogCards";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 
 const Blogs = () => {
-    const navigate = useNavigate();
-    return (
-        <section>
-            <div className='flex justify-between items-center md:py-4 md:px-8 px-6 pt-6'>
-                <img src="/LOGO.svg" className='w-8 md:w-12' alt="logo" />
-                <p className='text-white font-bold text-lg md:text-3xl'>Blogs</p>
-                <button
-                    onClick={() => navigate("/")}
-                    className="relative font-semibold text-xs md:text-sm text-white bg-secondary rounded-2xl hover:bg-light-secondary transition-all duration-300 border-2 border-secondary hover:border-white p-2 hover:border-opacity-45 whitespace-nowrap  cursor-pointer"
-                >
-                    Join Now
-                </button>
-            </div>
-            <BlogCards />
-            <Footer />
-        </section>
-    )
-}
+  return (
+    <section className="flex-col flex">
+      <Navbar />
+      <div className="m-auto p-16  md:pb-32 md:pt-20">
+        <h1 className="text-white text-4xl md:text-6xl font-semibold">Blogs</h1>
+      </div>
+      <BlogCards />
+      <Footer />
+    </section>
+  );
+};
 
-export default Blogs
+export default Blogs;
