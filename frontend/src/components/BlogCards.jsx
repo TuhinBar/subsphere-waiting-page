@@ -16,13 +16,14 @@ const BlogContents = [
   },
   {
     id: 2,
-    Date: "20 Jan,2024",
-    Time: "7 min read",
+    key: "introduction-to-subsphere",
+    Date: "31 Jan,2024",
+    Time: "2 min read",
     Title:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+      "Introduction to SubSphere: The Subscription Management Platform for Businesses",
     Content:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci laboriosam ad explicabo veniam quisquam? Est nemo, molestiae quod quis accusantium distinctio dolor neque reiciendis eveniet veritatis. Provident nobis quos laudantium  neque reiciendis eveniet veritatis. Provident nobis quos laudantium.",
-    Image: "https://i.imgur.com/IGBjds7.jpg",
+      "Nowadays memberships are a must for growing businesses whether you are a salon or a restaurant. Memberships or subscription plans allow a business to enable the option to have more recurring customers and revenue. However, managing all these kinds of stuff can be a bit hectic for many businesses as they have to focus on other business operations. That’s where SubSphere comes into play",
+    Image: "https://i.imgur.com/HAhVhCa.jpeg",
   },
   {
     id: 3,

@@ -6,6 +6,7 @@ import Blogs from "./pages/Blogs";
 import BlogPage from "./components/BlogPage";
 import Faqs from "./pages/Faqs";
 import TrendsInSubscription from "./components/Blogs/TrendsInSubscription";
+import IntroductionToSubsphere from "./components/Blogs/IntroSubsphere";
 
 function App() {
   return (
@@ -21,6 +22,11 @@ function App() {
             path="/blogs/trends-in-subscription"
             name="Blog"
             element={<TrendsInSubscription />}
+          />
+          <Route
+            path="/blogs/introduction-to-subsphere"
+            name="Blog"
+            element={<IntroductionToSubsphere />}
           />
 
           <Route path="/faqs" name="Blog" element={<Faqs />} />
