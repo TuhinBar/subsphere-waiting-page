@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import BlogsHeader from "./BlogsHeader";
 
 const IntroductionToSubsphere = () => {
+  useEffect(() => {
+    // Smooth scroll to the top of the page when the component is mounted
+    const scrollToTop = () => {
+      const element = document.documentElement;
+      element.scrollIntoView({ behavior: "smooth" });
+    };
+
+    scrollToTop();
+  }, []);
   return (
     <>
       <Navbar />
