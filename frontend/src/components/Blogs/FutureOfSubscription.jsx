@@ -19,7 +19,7 @@ const FutureofSubscription = () => {
       <div className="container mx-auto px-4 w-[95%] md:w-[70%] text-slate-500">
         <BlogsHeader
           writer={"Tuhin Bar"}
-          publishedOn={"01 Feb, 2024"}
+          publishedOn={"1st Feb, 2024"}
           duration={"3 minutes"}
           category={["business", "subscription", "billing", "subsphere"]}
           title={"Future of subscription services"}

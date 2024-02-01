@@ -5,61 +5,53 @@ import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 
 const Faqs = () => {
-  const faqNavList = ["Pricing", "Starting a project"];
+  const faqNavList = ["Get Started", "Help & SUpport"];
   const faqCardData = [
     {
       name: [
         {
-          question: "What size budgets do you typically work with? One",
-          answer:
-            "We typically work with clients within the following project brackets £2-5k £5-10k £10-20k £25k+",
+          question: "What is SubSphere, and how does it work ?",
+          answer: `SubSphere is a subscription management platform designed to help businesses streamline their subscription processes. It provides a centralized hub for businesses to manage memberships, subscriptions, and offers. For a detailed explanation read our blogs.`,
         },
         {
-          question: "How do I figure out how much your services will cost?",
+          question: "How can SubSphere benefit my business?",
           answer:
-            "Determining the cost of our services is best achieved through a 15-30 minute discovery call, where we can understand your unique requirements. Following that, we will provide a transparent and detailed price within 24-48 hours tailored specifically to your needs.",
+            "SubSphere offers numerous benefits, including simplified subscription management, increased customer engagement, and streamlined billing processes. It helps businesses of all sizes enhance their subscription services and improve overall operational efficiency.",
         },
         {
-          question: "What are the payment terms for a typical project?",
-          answer: "50% to begin, 25% halfway through, and 25% upon delivery.",
+          question: "Is SubSphere suitable for businesses of all sizes?",
+          answer:
+            "Yes, SubSphere is designed to be scalable and adaptable for businesses of all sizes. Whether you're a small cafe or a larger enterprise, SubSphere can cater to your unique subscription needs.",
         },
         {
-          question: "How much does Webflow hosting cost?",
+          question: "What industries does SubSphere cater to?",
           answer:
-            "The cost of Webflow hosting depends on the specific plan you choose. Webflow offers a variety of hosting plans with different features and pricing tiers. It's best to visit the Webflow website or contact their sales team directly for the most up-to-date and accurate pricing information for their hosting services.",
+            " SubSphere is versatile and caters to various industries such as restaurants, salons, cafes, and more. Its flexible features make it suitable for a wide range of businesses offering subscription services.",
         },
         {
-          question: "Retainer pricing",
+          question: "Is SubSphere compatible with existing software and tools?",
           answer:
-            "Need design and Webflow development delivery on a continual basis? Schedule a discovery call and we can create a flexible retainer specifically for your needs.",
+            "Yes, SubSphere is designed with integration in mind. It can seamlessly integrate with other business tools, enhancing your workflow and ensuring a smooth experience across various aspects of your operations.",
+        },
+        {
+          question:
+            "How can businesses promote their subscriptions on SubSphere?",
+          answer:
+            "SubSphere provides features for businesses to easily showcase and promote their subscriptions. From exclusive offers to personalized promotions, our platform empowers businesses to attract and retain subscribers effectively.",
         },
       ],
     },
     {
       name: [
         {
-          question: "What size budgets do you typically work with? two",
+          question: " What kind of customer support does SubSphere offer?",
           answer:
-            "We typically work with clients within the following project brackets £2-5k £5-10k £10-20k £25k+",
+            "SubSphere is proud to offer dedicated customer support. Our team of real people is here to assist businesses with any questions or concerns. You can reach out to our support team via email: support@thesubsphere.com",
         },
         {
-          question: "How do I figure out how much your services will cost?",
+          question: "Is there a trial period for SubSphere?",
           answer:
-            "Determining the cost of our services is best achieved through a 15-30 minute discovery call, where we can understand your unique requirements. Following that, we will provide a transparent and detailed price within 24-48 hours tailored specifically to your needs.",
-        },
-        {
-          question: "What are the payment terms for a typical project?",
-          answer: "50% to begin, 25% halfway through, and 25% upon delivery.",
-        },
-        {
-          question: "How much does Webflow hosting cost?",
-          answer:
-            "The cost of Webflow hosting depends on the specific plan you choose. Webflow offers a variety of hosting plans with different features and pricing tiers. It's best to visit the Webflow website or contact their sales team directly for the most up-to-date and accurate pricing information for their hosting services.",
-        },
-        {
-          question: "Retainer pricing",
-          answer:
-            "Need design and Webflow development delivery on a continual basis? Schedule a discovery call and we can create a flexible retainer specifically for your needs.",
+            " Yes, we understand the importance of trying before committing. SubSphere will be offering a trial period for businesses to explore the platform, experience its features, and assess how it aligns with their needs.",
         },
       ],
     },

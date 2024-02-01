@@ -45,14 +45,30 @@ const Footer = (props) => {
         </div>
         <div>
           <h1 className="text-white font-semibold text-sm mb-2">Contact</h1>
-          <p className="text-xs text-gray-500">subsphere.business@gmail.com</p>
+          <p className="text-xs text-gray-500 cursor-pointer">
+            subsphere.business@gmail.com
+          </p>
         </div>
         <div className="flex flex-col cursor-pointer ">
           <h1 className="text-white font-semibold text-sm mb-2">Socials</h1>
           <div className="flex gap-6">
-            <MdEmail className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
-            <RiTwitterFill className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
-            <a href="https://www.linkedin.com/company/thesubsphere">
+            <MdEmail
+              className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out"
+              onClick={() => {
+                window.open("mailto:subsphere.business@gmail.com", "_blank");
+              }}
+            />
+            <RiTwitterFill
+              className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out"
+              onClick={() => {
+                window.open("https://twitter.com/thesubsphere", "_blank");
+              }}
+            />
+            <a
+              href="https://www.linkedin.com/company/thesubsphere"
+              target="_blank"
+              rel="noreferrer"
+            >
               <RiLinkedinFill className="w-5  h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out" />
             </a>
           </div>
