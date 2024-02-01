@@ -27,8 +27,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const dotenv = __importStar(require("dotenv"));
-// dotenv.config({ path: "prod.env" });
-dotenv.config({ path: "dev.env" });
+dotenv.config({ path: "prod.env" });
+// dotenv.config({ path: "dev.env" });
 console.log("ENV : ", process.env.NODE_ENV);
 // library imports
 const express_1 = __importDefault(require("express"));
