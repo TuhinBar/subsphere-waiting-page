@@ -44,7 +44,7 @@ const Footer = (props) => {
           </button>
         </div>
         <div>
-          <h1 className="text-white font-semibold text-sm mb-2">Contact</h1>
+          <h1 className="text-white font-semibold text-sm mb-2 ">Contact</h1>
           <p className="text-xs text-gray-500 cursor-pointer">
             business@thesubsphere.com
           </p>
