@@ -46,7 +46,7 @@ const Footer = (props) => {
         <div>
           <h1 className="text-white font-semibold text-sm mb-2">Contact</h1>
           <p className="text-xs text-gray-500 cursor-pointer">
-            subsphere.business@gmail.com
+            business@thesubsphere.com
           </p>
         </div>
         <div className="flex flex-col cursor-pointer ">
@@ -55,7 +55,7 @@ const Footer = (props) => {
             <MdEmail
               className="w-5 h-5 text-white opacity-55 hover:opacity-100 transition-all duration-200 ease-in-out"
               onClick={() => {
-                window.open("mailto:subsphere.business@gmail.com", "_blank");
+                window.open("mailto:business@thesubsphere.com", "_blank");
               }}
             />
             <RiTwitterFill
