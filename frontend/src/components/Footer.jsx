@@ -7,7 +7,7 @@ const Footer = (props) => {
   const navigate = useNavigate();
   return (
     <div className=" h-full px-0 md:px-8 lg:px-0 mt-0 lg:mt-40 xl:mt-0">
-      <div className="flex md:justify-between lg:justify-evenly md:items-center md:gap-0 gap-8 flex-col md:flex-row px-12 md:px-0  pt-12 pb-8 ">
+      <div className="flex md:justify-between lg:justify-evenly md:items-center md:gap-0 gap-8 flex-col md:flex-row px-6 lg:px-12 md:px-0  pt-12 pb-8 ">
         <a href="/" className="flex items-center">
           {/* <img src="/LOGO.svg" alt="logo" className="w-12 3xl:w-20" />
                     <p className='text-white font-semibold text-xl'>Subsphere</p> */}
@@ -44,7 +44,7 @@ const Footer = (props) => {
           </button>
         </div>
         <div>
-          <h1 className="text-white font-semibold text-sm mb-2">Contact</h1>
+          <h1 className="text-white font-semibold text-sm mb-2 ">Contact</h1>
           <p className="text-xs text-gray-500 cursor-pointer">
             business@thesubsphere.com
           </p>

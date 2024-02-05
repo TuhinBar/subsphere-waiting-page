@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 
 const Faqs = () => {
-  const faqNavList = ["Get Started", "Help & SUpport"];
+  const faqNavList = ["Get Started", "Help & Support"];
   const faqCardData = [
     {
       name: [
