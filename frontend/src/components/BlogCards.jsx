@@ -42,7 +42,7 @@ const BlogContents = [
     time: "3 min read",
     title: "Future of subscription services",
     content:
-      "Every business owner wants their business to grow. For this, they try to introduce various lucrative offers for customers or they try to engage with them more to have a great healthy customer relationship. Subscrip[tion services plays a crucial role here. Without a subscription or membership, you cannot make your customers feel connected. Other than that the recurring customer rate increases this way. So we can say other than marketing and stuff, membership is one of the most important for businesses like cafes, restaurants, salons, pubs, bookstores, and many more",
+      "Every business owner wants their business to grow. For this, they try to introduce various lucrative offers for customers or they try to engage with them more to have a great healthy customer relationship. Subscription services plays a crucial role here. Without a subscription or membership, you cannot make your customers feel connected. Other than that the recurring customer rate increases this way. So we can say other than marketing and stuff, membership is one of the most important for businesses like cafes, restaurants, salons, pubs, bookstores, and many more",
     image: "https://i.imgur.com/UqysV1q.jpeg",
     key: "future-of-subscription",
   },
