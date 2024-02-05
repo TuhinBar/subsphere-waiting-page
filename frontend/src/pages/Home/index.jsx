@@ -18,7 +18,7 @@ const Home = () => {
 
         <HeaderTags />
 
-        <div className="right hidden lg:absolute lg:block -right-16 3xl:right-2 translate-x-40  xl:opacity-25 md:opacity-10 z-40 ">
+        <div className="right hidden lg:absolute lg:block -right-16 3xl:right-2 translate-x-40  xl:opacity-25 md:opacity-10 ">
           <img
             className="w-[85%] 3xl:w-full"
             src="https://i.imgur.com/7JDG3Nx.png"
