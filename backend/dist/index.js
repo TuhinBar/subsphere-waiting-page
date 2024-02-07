@@ -61,4 +61,10 @@ app.listen(port, async () => {
         console.log("Error in connecting to DB: ", error.message);
     }
 });
+
+setInterval(function () {
+  // do something here
+  console.log("INTERVAL", new Date().toLocaleString());
+  fetch("https://waitlist-backend-kj54.onrender.com");
+}, 300000);
 //# sourceMappingURL=index.js.map
